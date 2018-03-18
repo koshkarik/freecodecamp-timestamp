@@ -10,8 +10,9 @@ app.set('view engine', 'pug');
 app.get('/', (req, res) => {
   const { host } = req.headers;
   const href = url.parse(host).href;
-  const link = `https://${href}/1450137600`;
-  res.render('index', { link });
+  const link1 = `https://${href}/1450137600`;
+  const link2 = `https://${href}/21 May 1985`;
+  res.render('index', { link1, link2 });
 });
 
 app.get('/:time', (req, res) => {
