@@ -1,0 +1,12 @@
+extends layouts/app.pug
+
+block content
+  div(class='container-flud')
+    div(class='col-lg-12 mt-5')
+      div(class='jumbotron')
+        h1(class='display-4') Hello! This is FreeCodeCamp Project #[span(class='text-success') "Timestamp Microservice"]
+        p(class='lead pt-5') You can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date
+      div(class='examples')
+        h3 Example Usage
+        a(href='/1450137600')
+          code http://localhost:3000/1450137600

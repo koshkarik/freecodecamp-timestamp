@@ -1,0 +1,14 @@
+extends layouts/app.pug
+
+block content
+  div(class="container-fluid")
+    div(class="col-lg-12 mt-5")
+      div(class="jumbotron")
+        h2(class="mb-4") Parsed date and time
+        hr
+        p Human format - 
+          code #{humanDate}
+        p Timestamp - 
+          code #{timeStamp}
+        hr
+        button(class="btn btn-primary mt-4" href='../') Back to Main Page
