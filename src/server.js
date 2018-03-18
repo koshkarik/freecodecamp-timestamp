@@ -1,4 +1,5 @@
 import express from 'express';
+import url from 'url';
 
 const app = express();
 
@@ -7,7 +8,10 @@ app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-  res.render('index');
+  const { host } = req.headers;
+  const href = url.parse(host).href;
+  const link = `https://${href}/1450137600`;
+  res.render('index', { link });
 });
 
 app.get('/:time', (req, res) => {
